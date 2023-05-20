@@ -6,6 +6,7 @@
   height: 40vmin;
   pointer-events: none;
   width:20px;
+  outline:none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
