@@ -1,11 +1,11 @@
 import React from 'react'
-import img from './images/iPhone.jpg'
+import imageShow from '../images/iPhone.jpg'
 import './Header.css'
 
 const Header = () => {
     return (
         <div className='iPhone'>
-            <img className='imgiPhone' src={img} alt="" />
+            <img className='imgiPhone' src={imageShow} alt="" />
 
             <nav>
                 <a href="/Home">Home</a>

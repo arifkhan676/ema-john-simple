@@ -1,0 +1,19 @@
+
+.Products{
+  display: flex;
+  border-bottom: 1px solid #BABFC5;
+
+}
+.image{
+    width: 300px;
+    padding: 30px;
+}
+.cartBtn{
+    background-color: #E0A800;
+    padding: 10px 20px ;
+    border:none;
+    border-radius: 5px;
+}
+.icon{
+    margin-right: 10px;
+}
