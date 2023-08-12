@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import iPhone from '../../DeviceData/iPhone'
 import Products from '../Products/Products'
 import './Shop.css'
+import Cart from '../Cart/Cart'
 
 const Shop = () => {
 
@@ -26,8 +27,7 @@ const Shop = () => {
 
             </div>
             <div className="cart-container">
-                <h1> cart container</h1>
-                <p> Order Summary : {cartBtn.length} </p>
+                <Cart Cart={cartBtn} />
             </div>
 
         </div>
