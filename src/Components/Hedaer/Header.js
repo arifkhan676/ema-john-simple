@@ -13,7 +13,7 @@ const Header = () => {
                     Home
                 </NavLink>
                 <NavLink to="/Order" >
-                    Order
+                    Order Country
                 </NavLink>
                 <NavLink to="/Manage" >
                     Manage Inventory

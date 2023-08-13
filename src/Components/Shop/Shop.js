@@ -9,7 +9,7 @@ const Shop = () => {
     const [products, setProducts] = useState(iPhone)
 
     const [cartBtn, setcartBtn] = useState([]);
-    // console.log(btn);
+    console.log(cartBtn);
     const btnClick = (item) => {
         const newcart = [...cartBtn, item]
         setcartBtn(newcart)
