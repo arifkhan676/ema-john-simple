@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Button from 'react-bootstrap/Button';
+
 
 const Country = (props) => {
     const { name, flags, population } = props.name;
@@ -20,7 +22,8 @@ const Country = (props) => {
             <h2>  {name.common}</h2>
             <img src={flags.png} alt="" />
             <p>populations: {population}</p>
-            <button onClick={() => props.handleClick(population)} > add country </button>
+
+            <Button onClick={() => props.handleClick(population)} variant="primary">add country</Button>
         </div>
     )
 }
