@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Newcart from './Newcart';
 
 const Cart = (props) => {
     const Cart = props.Cart;
-
     //const total = cart.reduce((total, prd) => total + prd.price, 0)
-
+    console.log(Cart);
     let total = 0;
+
+    const NewItem = Cart.map((newItem, idx) => {
+        return <Newcart key={idx}
+            newItem={newItem}
+
+        />
+    })
+
     for (let i = 0; i < Cart.length; i++) {
         const item = Cart[i];
         total = total + item.price;
@@ -19,15 +27,21 @@ const Cart = (props) => {
     }
     const tax = Math.round(total / 80);
 
-    console.log(total);
+    // console.log(total);
     return (
-        <div>
+        <div className='container'>
             <h1> cart container</h1>
+
             <p> Order Summary : {Cart.length} </p>
             <p> Product Price: ${total}  </p>
             <p>Shipping: ${shipping}</p>
             <p> Taxes: ${tax} </p>
             <p>Total Price: ${total + shipping + tax}</p>
+
+            <hr />
+            {NewItem}
+            <button className='btn btn-warning' > Buy </button>
+
         </div>
     )
 }

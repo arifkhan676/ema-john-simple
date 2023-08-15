@@ -9,7 +9,7 @@ const Shop = () => {
     const [products, setProducts] = useState(iPhone)
 
     const [cartBtn, setcartBtn] = useState([]);
-    console.log(cartBtn);
+    // console.log(cartBtn);
     const btnClick = (item) => {
         const newcart = [...cartBtn, item]
         setcartBtn(newcart)
@@ -19,15 +19,17 @@ const Shop = () => {
         <div className='shop-container' >
             <div className="products-container">
 
-                {products.map(product =>
+                {products.map((product, idx) =>
                     <Products
+                        key={idx}
                         item={product}
                         handleClick={btnClick}
                     />)}
 
             </div>
             <div className="cart-container">
-                <Cart Cart={cartBtn} />
+                <Cart Cart={cartBtn}
+                />
             </div>
 
         </div>
