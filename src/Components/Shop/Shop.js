@@ -19,9 +19,8 @@ const Shop = () => {
         <div className='shop-container' >
             <div className="products-container">
 
-                {products.map((product, idx) =>
+                {products.map((product) =>
                     <Products
-                        key={idx}
                         item={product}
                         handleClick={btnClick}
                     />)}

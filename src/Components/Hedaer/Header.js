@@ -17,6 +17,9 @@ const Header = () => {
                 <NavLink to="/Order" >
                     Order Country
                 </NavLink>
+                <NavLink to="/Product" >
+                    Products
+                </NavLink>
                 <NavLink to="/Manage" >
                     Manage Inventory
                 </NavLink>

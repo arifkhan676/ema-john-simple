@@ -6,6 +6,8 @@ import DeviceData from './DeviceData/iPhone';
 import Order from './Components/Oder/Order';
 import { Routes, Route } from 'react-router-dom';
 import Error from './Components/Error';
+import Manage from './Components/Manage/Manage';
+import Product from './Components/Product/Product';
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <Routes >
         <Route exact path='/' element={<Shop />} >  </Route>
         <Route path='/Order' element={<Order />} >  </Route>
+        <Route path='/Product/:ProductKey' element={<Product />} >  </Route>
+        <Route path='/Manage' element={<Manage />} >  </Route>
         <Route path='*' element={<Error />}  >  </Route>
       </Routes>
 
