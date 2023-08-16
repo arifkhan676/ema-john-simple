@@ -2,6 +2,8 @@ import React from 'react'
 import imageShow from '../images/iPhone.jpg'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 
 const Header = () => {
     return (
@@ -17,6 +19,9 @@ const Header = () => {
                 </NavLink>
                 <NavLink to="/Manage" >
                     Manage Inventory
+                </NavLink>
+                <NavLink to='/icon' >
+                    <FontAwesomeIcon className='icon' icon={faShoppingBag} />
                 </NavLink>
             </nav>
 

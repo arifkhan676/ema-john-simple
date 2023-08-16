@@ -5,15 +5,17 @@ import Shop from './Components/Shop/Shop';
 import DeviceData from './DeviceData/iPhone';
 import Order from './Components/Oder/Order';
 import { Routes, Route } from 'react-router-dom';
+import Error from './Components/Error';
+
 
 function App() {
   return (
     <div >
       <Header />
       <Routes >
-        <Route path='/' element={<Shop />} >  </Route>
-        <Route path='/Home' element={<Shop />} >  </Route>
+        <Route exact path='/' element={<Shop />} >  </Route>
         <Route path='/Order' element={<Order />} >  </Route>
+        <Route path='*' element={<Error />}  >  </Route>
       </Routes>
 
     </div>
