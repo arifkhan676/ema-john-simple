@@ -5,8 +5,8 @@ import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 const Products = (props) => {
-    //  console.log(props.item.key);
-    const { name, seller, imgURL, price, Details, key } = props.item;
+    //  console.log(props.item.id);
+    const { name, seller, imgURL, price, Details, id } = props.item;
 
 
     return (
@@ -15,7 +15,7 @@ const Products = (props) => {
                 <img className='image' src={imgURL} alt="" />
             </div>
             <div className="detail-container">
-                <Link to={'/Product/' + key}>  <h2>{name}</h2>  </Link>
+                <Link to={'/Product/' + id}>  <h2>{name}</h2>  </Link>
 
 
                 <br />

@@ -21,6 +21,7 @@ const Shop = () => {
 
                 {products.map((product) =>
                     <Products
+                        key={product.id}
                         item={product}
                         handleClick={btnClick}
                     />)}
