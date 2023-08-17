@@ -11,7 +11,7 @@ const Product = () => {
     // console.log(x);
     return (
         <div>
-            <Products item={productPage} >  </Products>
+            <Products showAddCart={false} item={productPage} >  </Products>
         </div>
     )
 }
