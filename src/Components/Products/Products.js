@@ -8,6 +8,7 @@ const Products = (props) => {
     //  console.log(props.item.id);
     const { name, seller, imgURL, price, Details, id } = props.item;
 
+    console.log(props);
 
     return (
         <div className='Products'>
@@ -23,10 +24,12 @@ const Products = (props) => {
                 <p>{price}</p>
                 <p>  {Details} </p>
                 <br />
-                <button className='cartBtn' onClick={() => props.handleClick(props.item)} >
+                {props.showAddCart ? <button className='cartBtn' onClick={() => props.handleClick(props.item)} >
                     <FontAwesomeIcon className='icon' icon={faShoppingBag} />
                     add to cart
-                </button>
+                </button> : null}
+
+
             </div>
 
         </div>

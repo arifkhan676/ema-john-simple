@@ -24,6 +24,7 @@ const Shop = () => {
                         key={product.id}
                         item={product}
                         handleClick={btnClick}
+                        showAddCart={true}
                     />)}
 
             </div>
