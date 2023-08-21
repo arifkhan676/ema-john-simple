@@ -3,6 +3,7 @@ import iPhone from '../../DeviceData/iPhone'
 import Products from '../Products/Products'
 import './Shop.css'
 import Cart from '../Cart/Cart'
+import { addToCartDatabase } from '../utilities/databaseManager'
 
 const Shop = () => {
 
@@ -13,6 +14,9 @@ const Shop = () => {
     const btnClick = (item) => {
         const newcart = [...cartBtn, item]
         setcartBtn(newcart)
+        const sameProduct = newcart.filter(pd => pd.id === item.id)
+        const count = sameProduct.length;
+        addToCartDatabase(item.id, count)
     }
 
     return (

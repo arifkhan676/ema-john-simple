@@ -5,8 +5,8 @@ import Shop from './Components/Shop/Shop';
 import Order from './Components/Oder/Order';
 import { Routes, Route } from 'react-router-dom';
 import Error from './Components/Error';
-import Manage from './Components/Manage/Manage';
 import Product from './Components/Product/Product';
+import Review from './Components/Cart/Review';
 
 
 function App() {
@@ -17,7 +17,7 @@ function App() {
         <Route exact path='/' element={<Shop />} >  </Route>
         <Route path='/Order' element={<Order />} >  </Route>
         <Route path='/Product/:ProductID' element={<Product />} >  </Route>
-        <Route path='/Manage' element={<Manage />} >  </Route>
+        <Route path='/Review' element={<Review />} >  </Route>
         <Route path='*' element={<Error />}  >  </Route>
       </Routes>
 

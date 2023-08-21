@@ -8,7 +8,7 @@ const Products = (props) => {
     //  console.log(props.item.id);
     const { name, seller, imgURL, price, Details, id } = props.item;
 
-    console.log(props);
+    //console.log(props);
 
     return (
         <div className='Products'>

@@ -3,6 +3,8 @@ import Newcart from './Newcart';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 import './Cart.css'
+import Review from './Review';
+import { NavLink } from 'react-router-dom';
 
 const Cart = (props) => {
     const Cart = props.Cart;
@@ -43,10 +45,15 @@ const Cart = (props) => {
             <p> Taxes: ${tax} </p>
             <p>Total Price: ${total + shipping + tax}</p>
 
+            <NavLink to='Review'>
+                <button className='cartBtn' >
+                    Review
+                </button>
+            </NavLink>
+
+
             <hr />
             {NewItem}
-
-            <button className='btn btn-warning' > Buy </button>
 
         </div>
     )

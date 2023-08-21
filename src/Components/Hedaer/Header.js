@@ -20,8 +20,8 @@ const Header = () => {
                 <NavLink to="/Product" >
                     Products
                 </NavLink>
-                <NavLink to="/Manage" >
-                    Manage Inventory
+                <NavLink to="/Review" >
+                    Order Review
                 </NavLink>
                 <NavLink to='/icon' >
                     <FontAwesomeIcon className='icon' icon={faShoppingBag} />
