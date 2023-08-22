@@ -53,7 +53,7 @@ const Cart = (props) => {
 
 
             <hr />
-            {NewItem}
+
 
         </div>
     )

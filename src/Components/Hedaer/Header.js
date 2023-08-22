@@ -22,10 +22,9 @@ const Header = () => {
                 </NavLink>
                 <NavLink to="/Review" >
                     Order Review
+                    <FontAwesomeIcon style={{ marginLeft: 5 }} className='icon' icon={faShoppingBag} />
                 </NavLink>
-                <NavLink to='/icon' >
-                    <FontAwesomeIcon className='icon' icon={faShoppingBag} />
-                </NavLink>
+
             </nav>
 
         </div>
