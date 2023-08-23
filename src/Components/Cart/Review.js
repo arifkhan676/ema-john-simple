@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import { getDatabaseCart } from '../utilities/databaseManager';
+import { getDatabaseCart, removeFromDatabaseCart } from '../utilities/databaseManager';
 import iPhone from '../../DeviceData/iPhone';
 import ReviewCart from '../ReviewCart/ReviewCart';
+import './Cart.css'
+import Cart from './Cart';
 
 const Review = () => {
 
     const [productCart, setproductCart] = useState([]);
 
+    const handleRemove = (productId) => {
+        // console.log('clicke remove', productId);
+        const removeData = productCart.filter(pd => pd.id !== productId)
+        setproductCart(removeData);
+        removeFromDatabaseCart(productId)
+    }
 
     useEffect(() => {
         const savedCart = getDatabaseCart()
@@ -23,12 +31,23 @@ const Review = () => {
 
 
     return (
-        <div>
-            <h1>cart: {productCart.length}</h1>
-            {
-                productCart.map(pd => <ReviewCart key={pd.id} product={pd} />)
-            }
+        <div className='reviewCart' >
+            <div className="left-cart">
+                <h1>cart: {productCart.length}</h1>
+                {
+                    productCart.map(pd => <ReviewCart
+                        key={pd.id}
+                        handleRemove={handleRemove}
+                        product={pd} />)
+                }
+            </div>
+            <div className="right-cart">
+                <Cart Cart={productCart}
+                    buttonName=''
+                />
+            </div>
         </div>
+
     )
 }
 

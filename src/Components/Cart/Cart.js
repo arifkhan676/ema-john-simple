@@ -12,15 +12,15 @@ const Cart = (props) => {
     // console.log(Cart);
     let total = 0;
 
-    const NewItem = Cart.map((newItem, idx) => {
-        return <Newcart key={idx}
-            newItem={newItem}
-        />
-    })
-
+    /*   const NewItem = Cart.map((newItem, idx) => {
+           return <Newcart key={idx}
+               newItem={newItem}
+           />
+       })
+   */
     for (let i = 0; i < Cart.length; i++) {
         const item = Cart[i];
-        total = total + item.price;
+        total = total + item.price * item.quantity;
     }
 
     let shipping = 0;

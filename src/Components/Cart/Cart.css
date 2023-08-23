@@ -13,3 +13,15 @@
     margin-left: 3%;
     display: flex;
 }
+.mainRev{
+    display: flex;
+}
+.reviewCart{
+    display: flex;
+}
+.left-cart{
+    border-bottom: 1px solid lightgray;
+}
+.right-cart{
+    border-left: 1px solid lightgray;
+}
