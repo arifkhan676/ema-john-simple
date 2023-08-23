@@ -12,10 +12,19 @@ const Shop = () => {
     const [cartBtn, setcartBtn] = useState([]);
     // console.log(cartBtn);
     const btnClick = (item) => {
-        const newcart = [...cartBtn, item]
-        setcartBtn(newcart)
-        const sameProduct = newcart.filter(pd => pd.id === item.id)
-        const count = sameProduct.length;
+        const sameProduct = cartBtn.find(pd => pd.id === item.id);
+        let count = 1;
+        let newCart;
+        if (sameProduct) {
+            count = sameProduct.quantity + 1;
+            sameProduct.quantity = count;
+            const others = cartBtn.filter(pd => pd.id !== item.id);
+            newCart = [...others, sameProduct]
+        } else {
+            item.quantity = 1;
+            newCart = [...cartBtn, item]
+        }
+        setcartBtn(newCart)
         addToCartDatabase(item.id, count)
     }
 
