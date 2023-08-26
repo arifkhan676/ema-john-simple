@@ -1,4 +1,3 @@
-import React from 'react'
 
 const getUser = () => {
     const extinhuisher = sessionStorage.getItem('userId');
@@ -38,7 +37,7 @@ const processOrder = (cart) => {
     localStorage.removeItem(getDataKey());
 }
 
-export { addToCartDatabase, getDatabaseCart, removeFromDatabaseCart, }
+export { addToCartDatabase, getDatabaseCart, removeFromDatabaseCart, processOrder }
 
 const localStorage = window.localStorage || (() => {
     let store = {}
