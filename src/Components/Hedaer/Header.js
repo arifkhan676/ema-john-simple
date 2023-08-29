@@ -1,11 +1,18 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import imageShow from '../images/iPhone.jpg'
 import './Header.css'
 import { NavLink } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons'
+import { Badge } from '@mui/material'
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Context } from '../../App'
 
 const Header = () => {
+
+    const [cartCount, setCount] = useContext(Context)
+
+
     return (
         <div className='iPhone'>
             <img className='imgiPhone' src={imageShow} alt="" />
@@ -22,7 +29,9 @@ const Header = () => {
                 </NavLink>
                 <NavLink to="/Review" >
                     Order Review
-                    <FontAwesomeIcon style={{ marginLeft: 5 }} className='icon' icon={faShoppingBag} />
+                    <Badge badgeContent={cartCount} color="primary">
+                        <ShoppingCartIcon id="icon" />
+                    </Badge>
                 </NavLink>
 
             </nav>

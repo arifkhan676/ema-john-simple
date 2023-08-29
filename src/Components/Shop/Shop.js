@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import iPhone from '../../DeviceData/iPhone'
 import Products from '../Products/Products'
 import './Shop.css'
@@ -6,8 +6,13 @@ import Cart from '../Cart/Cart'
 import { addToCartDatabase, getDatabaseCart } from '../utilities/databaseManager'
 import { Link } from 'react-router-dom'
 import '../Cart/Cart.css'
+import { useContext } from 'react'
+import { Context } from '../../App'
 
 const Shop = () => {
+
+    const [cartCount, setCount] = useContext(Context)
+    //console.log(cartCount);
 
     const [products, setProducts] = useState(iPhone)
 
@@ -42,6 +47,7 @@ const Shop = () => {
         }
         setcartBtn(newCart)
         addToCartDatabase(item.id, count)
+        setCount(count)
     }
 
 

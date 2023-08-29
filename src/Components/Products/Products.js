@@ -17,8 +17,6 @@ const Products = (props) => {
             </div>
             <div className="detail-container">
                 <Link to={'/Product/' + id}>  <h2>{name}</h2>  </Link>
-
-
                 <br />
                 <p> Co-Seller: {seller}</p>
                 <p>{price}</p>
