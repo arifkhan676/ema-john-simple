@@ -37,17 +37,10 @@ const Cart = (props) => {
             <p>Shipping: ${shipping}</p>
             <p> Taxes: ${tax} </p>
             <p>Total Price: ${total + shipping + tax}</p>
-
-            <NavLink to='Review'>
-                <button className='cartBtn' >
-                    Review
-                </button>
-            </NavLink>
-
-
             <hr />
-
-
+            {
+                props.children
+            }
         </div>
     )
 }

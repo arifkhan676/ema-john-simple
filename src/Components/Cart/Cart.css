@@ -20,8 +20,10 @@
     display: flex;
 }
 .left-cart{
-    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    width: 70%;
 }
 .right-cart{
     border-left: 1px solid lightgray;
+    width: 30%;
 }
